@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+
+ul {
+    width: 80%;
+    height: 10rem;
+    padding: 0;
+    /* center horizontally */
+    margin: 5rem auto;
+    /*remove bullets*/
+    list-style-type: none; 
+}
+
+li {
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    height: 10rem;
+    line-height: 10rem;
+    border: 1px solid darkgray;
+}
+
+:root {
+    --odd-color: #FFFA00;
+    --odd-bg-color: #005477;
+
+    --even-color: white;
+    --even-bg-color: black;
+}   
+
+li:nth-child(even) {
+    color: var(--even-color);
+    color: var(--even-bg-color);
+}
+
+li:nth-child(odd) {
+    color: var(--odd-color);
+    background-color: var(--odd-bg-color);
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        background-color: lightblue;
+    }
+    li {
+    width: 19%;
+    /*render items horizontally*/
+    display: inline-block;
+    }
+    :root {
+    --odd-color: #FFFA00;
+    --odd-bg-color: #005477;
+
+    --even-color: white;
+    --even-bg-color: black;
+    }   
+    li:nth-child(even) {
+    color: var(--even-color);
+    color: var(--even-bg-color);
+    }
+    li:nth-child(odd) {
+    color: var(--odd-color);
+    background-color: var(--odd-bg-color);
+    }

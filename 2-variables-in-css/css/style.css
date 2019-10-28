@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+
+ul {
+    width: 80%;
+    height: 10rem;
+    /* center horizontally */
+    margin: 5rem auto; 
+    padding: 0;
+    /*remove bullets*/
+    list-style-type: none; 
+}
+
+li {
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    /*render items horizontally*/
+    display: inline-block;
+    height: 10rem;
+    line-height: 10rem;
+    width: 19%;
+    border: 1px solid darkgray;
+}
+
+:root {
+    --odd-color: #FFFA00;
+    --odd-bg-color: #005477;
+
+    --even-color: white;
+    --even-bg-color: black;
+}
+
+li:nth-child(even) {
+    color: var(--even-color);
+    color: var(--even-bg-color);
+}
+li:nth-child(odd) {
+    color: var(--odd-color);
+    background-color: var(--odd-bg-color);
+}
+
